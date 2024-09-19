@@ -6,13 +6,7 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
   font-family: var(--font-geist-sans);
 }
 
@@ -27,25 +21,24 @@
   }
 }
 
+/* header has 60px height that is able to be used*/
+.header{
+  width: 100%;
+  height: 70px;
+  padding: 5px;
+}
+
+.header a{
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 30px;
   grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
 }
 
 .main code {
@@ -54,6 +47,30 @@
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
+}
+
+.main .box{
+  height: 90lvh;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.main .box:nth-child(1){
+  width: 100%;
+}
+
+.main .big_title{
+  font-size: 150px;
+}
+
+.main .big_title:nth-child(1){
+  padding-left: 5lvw;
+}
+.main .big_title:nth-child(2){
+  padding-left: 40lvw;
+}
+.main .big_title:nth-child(3){
+  padding-left: 45lvw;
 }
 
 .ctas {
@@ -89,10 +106,15 @@ a.secondary {
   min-width: 180px;
 }
 
+/* footer has auto height that is able to be used*/
 .footer {
+  width: 100%;
+  height: auto;
+  padding: 10px;
   grid-row-start: 3;
+  justify-content: center;
   display: flex;
-  gap: 24px;
+  gap: 30px;
 }
 
 .footer a {

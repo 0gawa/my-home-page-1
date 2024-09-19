@@ -1,24 +1,27 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <header className={styles.header}>
+        <Link href="/">
+            Daiki
+        </Link>
+      </header>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <div className={styles.box}>
+          <p className={styles.big_title}>Welcome</p>
+          <p className={styles.big_title}>To</p>
+          <p className={styles.big_title}>My Site</p>
+        </div>
+
+        <div className={styles.box}>
+          <p className={styles.big_title}>Welcome</p>
+          <p className={styles.big_title}>To</p>
+          <p className={styles.big_title}>My Site</p>
+        </div>
 
         <div className={styles.ctas}>
           <a
@@ -48,21 +51,14 @@ export default function Home() {
       </main>
       <footer className={styles.footer}>
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          © daiki-portfolio.site
         </a>
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://sauna-tankentai.daiki-portfolio.site"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -73,10 +69,10 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          サウナ探検隊 →
         </a>
         <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://hitori-times.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -87,7 +83,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          hitori-times.com →
         </a>
       </footer>
     </div>
