@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Tag from "@/app/ui/tag";
 
 export default function Home() {
   return (
@@ -12,43 +13,30 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <div className={styles.box}>
-          <p className={styles.big_title}>Welcome</p>
-          <p className={styles.big_title}>To</p>
-          <p className={styles.big_title}>My Site</p>
+          <p className={styles.big_title}>
+            My Mission Is To<br/>
+            Deliver Excitement
+          </p>
         </div>
 
         <div className={styles.box}>
-          <p className={styles.big_title}>Welcome</p>
-          <p className={styles.big_title}>To</p>
-          <p className={styles.big_title}>My Site</p>
+          <h1 className={styles.h1_title}>Portfolio</h1>
         </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className={styles.box}>
+          <h1 className={styles.h1_title}>About me</h1>
+          
         </div>
+
+        <div className={styles.box}>
+          <h1 className={styles.h1_title}>Keyword</h1>
+          <div className={styles.tag_box}>
+            <Tag content={"Ruby"}></Tag>
+          </div>
+        </div>
+
       </main>
+
       <footer className={styles.footer}>
         <a
           href="/"
