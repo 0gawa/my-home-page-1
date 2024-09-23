@@ -1,19 +1,10 @@
 .tagBox{
-    position: relative;
     display: inline-block;
-    padding: .8rem 2rem .8rem 3rem;
-    border-radius: 100vh 0 0 100vh;
-    font-size: 1.2rem;
-    background: rgb(233, 182, 63);
-    font-weight: bolder;
-}
-.tagBox:before {
-    position: absolute;
-    top: calc(50% - 7px);
-    left: 10px;
-    width: 14px;
-    height: 14px;
-    content: '';
-    border-radius: 50%;
-    background: #fff;
+    align-items: center;
+    padding: .5rem 1rem .5rem 1rem;
+    margin: 0 5px 10px 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1.0rem;
+    width: auto;
 }

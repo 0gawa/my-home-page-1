@@ -23,15 +23,35 @@ export default function Home() {
           <h1 className={styles.h1_title}>Portfolio</h1>
         </div>
 
-        <div className={styles.box}>
+        <div>
           <h1 className={styles.h1_title}>About me</h1>
-          
+          <div className={styles.box}>
+            <div className={styles.profileBox}>
+            
+            </div>
+            <div className={styles.expressBox}>
+  
+            </div>
+          </div>
         </div>
 
         <div className={styles.box}>
           <h1 className={styles.h1_title}>Keyword</h1>
           <div className={styles.tag_box}>
             <Tag content={"Ruby"}></Tag>
+            <Tag content={"Python"}></Tag>
+            <Tag content={"HTML"}></Tag>
+            <Tag content={"CSS"}></Tag>
+            <Tag content={"Rails"}></Tag>
+            <Tag content={"JavaScript"}></Tag>
+            <Tag content={"Next.js"}></Tag>
+            <Tag content={"React"}></Tag>
+            <Tag content={"Web Development"}></Tag>
+            <Tag content={"Sauna"}></Tag>
+            <Tag content={"Coffee"}></Tag>
+            <Tag content={"Mathematical Optimization"}></Tag>
+            <Tag content={"Ziro"}></Tag>
+            <Tag content={"WordPress"}></Tag>
           </div>
         </div>
 
