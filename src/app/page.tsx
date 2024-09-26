@@ -2,13 +2,20 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Tag from "@/app/ui/tag";
+import site_logo from "./images/top/site_logo.png";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
         <Link href="/">
-            Daiki
+          <Image
+              aria-hidden
+              src={site_logo}
+              alt="DAIKI"
+              width={60}
+              height={60}
+            />
         </Link>
       </header>
       <main className={styles.main}>
@@ -23,14 +30,21 @@ export default function Home() {
           <h1 className={styles.h1_title}>Portfolio</h1>
         </div>
 
-        <div>
-          <h1 className={styles.h1_title}>About me</h1>
-          <div className={styles.box}>
-            <div className={styles.profileBox}>
-            
-            </div>
-            <div className={styles.expressBox}>
-  
+        <div className={styles.box}>
+          <div className={styles.profileBox}>
+            <h1 className={styles.express}>About me</h1>
+          </div>
+          <div className={styles.expressBox}>
+            <div className={styles.express}>
+              <p>
+              私はCS専攻の大学生です。大学入学と同時にプログラミングを始め、その面白さに魅了されました。
+              その後、積極的に勉強して大学2年生のときに応用情報技術者試験に合格しました。他にも数学技能検定準1級
+              、統計検定2級、TOEIC790などを保有しています。<br/><br/>
+              
+              これに加えて、Webアプリケーション開発にも力を入れています。フロントエンド、バックエンドからインフラ周り
+              までフルスタックに開発しています。最近はUIのことについて学んでいます。<br/><br/>
+              これまでに培った幅広い知識と実践的なスキルを活かし、社会にワクワクを届けたいと考えています。
+              </p>
             </div>
           </div>
         </div>

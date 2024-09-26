@@ -23,6 +23,9 @@
 
 /* header has 60px height that is able to be used*/
 .header{
+  position: fixed;
+  top: 0; 
+  left: 0; 
   width: 100%;
   height: 70px;
   padding: 5px;
@@ -35,33 +38,23 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  grid-row-start: 2;
-}
-
-.main .box{
-  height: 90lvh;
   width: 100%;
 }
 
-.main .box:nth-child(1){
+.main .box{
   height: 100lvh;
-  margin-top: -70px;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.main .box:nth-child(1){
   position: relative;
   background-image: url("images/top/beach_01.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: -1;
-}
-
-.main .box:nth-child(3){
-  display: flex;
-  flex-direction: column;
-  grid-row-start: auto;
-}
+}  
 
 .main .big_title{
   font-size: 60px;
@@ -72,23 +65,59 @@
   color: rgb(255, 250, 242);
 }
 
+.main .box:nth-child(3){
+  display: flex;
+  background-image: url("images/top/TravelVlog.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  color: white;
+  padding-bottom: 0px;
+}    
+.main .box:nth-child(3)::after{
+  height: auto;
+  background-color: #0d0d0db2;
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}  
+
+.main .box:nth-child(4){
+  height: auto;
+  padding-bottom: 40lvh;
+}  
+
 .main .profileBox{
   display: inline-block;
-  background-color: aqua;
-  width: 40%;
+  width: 50%;
   height: 100%;
-  margin: 0 5%;
+  padding: 0 30px;
+  justify-content: center;
 }
 
 .main .expressBox{
   display: inline-block;
-  background-color: rgb(243, 247, 15);
-  width: 45%;
+  width: 50%;
   height: 100%;
+  padding: 0 30px;
+}
+.express{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .h1_title{
-  padding: 30px 10px 20px 50px;
+  padding: 15px 10px 20px 50px;
 }
 
 .tag_box{
@@ -156,15 +185,23 @@ a.secondary {
   }
 
   .h1_title{
-    padding: 30px 10px 20px 30px;
+    padding: 0px 10px 20px 30px;
   }
 
   .tag_box{
     padding-left: 30px;
   }
 
-  .main ol {
-    text-align: center;
+  .main .box:nth-child(3){
+    display: block;
+    padding-bottom: 50px;
+  }
+  
+  .main .expressBox, .main .profileBox{
+    display: block;
+    height: 50%;
+    width: 100%;
+    padding: 0 30px;
   }
 
   .footer {
@@ -172,6 +209,13 @@ a.secondary {
     align-items: center;
     justify-content: center;
   }
+  
+  .footer a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
