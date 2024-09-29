@@ -49,15 +49,24 @@
 
 .main .box:nth-child(1){
   position: relative;
-  background-image: url("images/top/beach_01.jpeg");
+  background-image: url("images/top/beach_02.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: -1;
-}  
+}
+
+.main .box:nth-child(2){
+  background-image: url("images/top/bg_yg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  padding: 0;
+}
 
 .main .big_title{
-  font-size: 60px;
+  font-size: 80px;
   position: absolute;
   top: 50%;
   left: 10%;
@@ -115,9 +124,14 @@
   align-items: center;
   justify-content: center;
 }
-
-.h1_title{
-  padding: 15px 10px 20px 50px;
+.expressTitle{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
 }
 
 .tag_box{
@@ -175,6 +189,12 @@ a.secondary {
   }
 }
 
+@media (max-width: 800px){
+  .main .big_title{
+    font-size: 60px;
+  }
+}
+
 @media (max-width: 600px) {
   .main .big_title{
     font-size: 32px;
@@ -184,14 +204,20 @@ a.secondary {
     transform: translateY(-60%);
   }
 
-  .h1_title{
-    padding: 0px 10px 20px 30px;
-  }
-
   .tag_box{
     padding-left: 30px;
   }
 
+  .main .box{
+    height: 150vh;
+  }
+
+  .main .box:nth-child(1){
+    height: 100vh;
+  }
+  .main .box:nth-child(2){
+    height: calc(100vh + 80vw);
+  }
   .main .box:nth-child(3){
     display: block;
     padding-bottom: 50px;
@@ -202,6 +228,10 @@ a.secondary {
     height: 50%;
     width: 100%;
     padding: 0 30px;
+  }
+  .expressBox .express p{
+    overflow: scroll;
+    height: 100%;
   }
 
   .footer {
