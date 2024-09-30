@@ -5,6 +5,12 @@ import Tag from "@/app/ui/tag";
 import PortfolioBox from "@/app/ui/portfolio_box";
 import site_logo from "./images/top/site_logo.png";
 import saunaTankentai from "./images/saunaTankentai.png"
+import { Qwitcher_Grypen } from "next/font/google";
+
+const QwitcherGrypen = Qwitcher_Grypen({
+  weight: "700",
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
@@ -22,15 +28,17 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <div className={styles.box}>
-          <p className={styles.big_title}>
+          <p className={`${styles.big_title} ${QwitcherGrypen.className}`}>
             My Mission Is To<br/>
             Deliver Excitement
           </p>
         </div>
 
         <div className={styles.box}>
-          <h1 className="text-center pt-12 text-5xl font-semibold">Portfolio</h1>
-          <div className="h-5/6 flex justify-center items-center">
+          <div className="h-1/6 flex justify-center items-center">
+            <h1 className="text-5xl text-white font-semibold">Portfolio</h1>
+          </div>
+          <div className="h-5/6 flex justify-center">
             <PortfolioBox
               title="サウナ探検隊"
               subTitle="サウナーによるサウナーのためのアプリ"
@@ -85,41 +93,61 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          © daiki-portfolio.site
-        </a>
-        <a
-          href="https://sauna-tankentai.daiki-portfolio.site"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          サウナ探検隊 →
-        </a>
-        <a
-          href="https://hitori-times.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          hitori-times.com →
-        </a>
+        <div className={styles.contentBox}>
+          <div className={styles.col}>
+            <h6 className="mb-3">BLOG</h6>
+            <a
+              href="https://hitori-times.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-1"
+            >
+              <Image
+                aria-hidden
+                src="https://nextjs.org/icons/globe.svg"
+                alt="@"
+                width={16}
+                height={16}
+              />
+              ひとりの時間
+            </a>
+          </div>
+          <div className={styles.col}>
+            <h6 className="mb-3">SERVICE</h6>
+            <a
+              href="https://sauna-tankentai.daiki-portfolio.site"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src={saunaTankentai}
+                alt="@"
+                height={23}
+              />
+            </a>
+          </div>
+          <div className={styles.col}>
+            <h6 className="mb-3">CONTACT</h6>
+            <a
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-1"
+            >
+              <Image
+                aria-hidden
+                src={site_logo}
+                alt="@"
+                height={16}
+              />
+              Contact Me
+            </a>
+          </div>
+        </div>
+        <div className={styles.copyrightBox}>
+          <p>© daiki-portfolio.site</p>
+        </div>
       </footer>
     </div>
   );

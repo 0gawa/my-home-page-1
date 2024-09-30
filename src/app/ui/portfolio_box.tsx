@@ -8,20 +8,24 @@ export default function PortfolioBox({title = "Coming Soon", subTitle = "Creatin
         <div className="card">
             <div className="cardTitle">
                 <a href={uri}>
-                    <h5 className="topTitle">{title}</h5>
-                    <p className="subTitle">{subTitle}</p>
-                    <Image
-                        aria-hidden
-                        src={image_path}
-                        alt={title}
-                    ></Image>
+                    <div className="title_box">
+                        <h5 className="topTitle">{title}</h5>
+                        <p className="subTitle">{subTitle}</p>
+                    </div>
+                    <div className="image_container h60">
+                        <Image
+                            aria-hidden
+                            src={image_path}
+                            alt={title}
+                        ></Image>
+                    </div>
                 </a>
             </div>
             <div className="cardBody">
                 <p>{express}</p>
-                <p>【開発言語】<br/>
+                <p className="pSpace">【開発言語】<br/>
                 {devLang}</p>
-                <p>【工夫点】<br/>
+                <p className="pSpace">【工夫点】<br/>
                 {points}</p>
             </div>
         </div>
