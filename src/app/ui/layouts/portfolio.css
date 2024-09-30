@@ -16,13 +16,15 @@
 .cardBody{
     width: 100%;
     height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 /*-------------------------------*/
 
 /*---------Css in cardTitle-------*/
 
 .topTitle{
-    text-align: center;
     font-size: 1.5rem;
     line-height: 1.75rem;
     font-weight: 600;
@@ -30,6 +32,24 @@
 }
 .subTitle{
     padding: 0 5px;
+}
+
+.title_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    flex-direction: column;
+}
+.image_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+
+.pSpace{
+    margin-top: 10px;
 }
 
 /*-------- All of areas -----------*/
