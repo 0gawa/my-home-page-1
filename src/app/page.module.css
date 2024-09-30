@@ -79,6 +79,22 @@
   color: rgb(255, 250, 242);
 }
 
+.main .big_title{
+  transition: 1.8s;
+  opacity: 1;
+  animation: anime_bigTitle 1.4s;
+}
+@keyframes anime_bigTitle {
+  0%{
+    opacity: 0;
+    transform: translateY(-45%);
+  }
+  100%{
+    transform: translateY(-55%);
+    opacity: 1;
+  }
+}
+
 .main .box:nth-child(3){
   display: flex;
   background-image: url("images/top/TravelVlog.png");
