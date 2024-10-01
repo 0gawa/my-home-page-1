@@ -46,28 +46,36 @@
   width: 100%;
 }
 
-.main .box{
+.main .firstSection{
+  width: 100%;
+  height: 200lvh;
+}
+
+.box, .scrollbox{
   height: 100lvh;
   width: 100%;
   padding: 30px 0;
 }
 
-.main .box:nth-child(1){
-  position: relative;
+.scrollbox:nth-child(1){
+  position: fixed;
   background-image: url("images/top/beach_02.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: -1;
+  top: 0;
 }
 
-.main .box:nth-child(2){
+.scrollbox:nth-child(2){
   background-image: url("images/top/night_sky.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
   padding: 0;
+  margin-top: -100lvh;
+  position: relative;
 }
 
 .main .big_title{
@@ -80,9 +88,9 @@
 }
 
 .main .big_title{
-  transition: 1.8s;
+  transition: 2.8s;
   opacity: 1;
-  animation: anime_bigTitle 1.4s;
+  animation: anime_bigTitle 2.8s;
 }
 @keyframes anime_bigTitle {
   0%{
@@ -95,6 +103,7 @@
   }
 }
 
+/*-------self introduction---------------*/
 .main .box:nth-child(3){
   display: flex;
   background-image: url("images/top/TravelVlog.png");
@@ -120,12 +129,7 @@
   z-index: -1;
 }  
 
-.main .box:nth-child(4){
-  height: auto;
-  padding-bottom: 40lvh;
-}  
-
-.main .profileBox{
+.box:nth-child(3) .profileBox{
   display: inline-block;
   width: 50%;
   height: 100%;
@@ -133,7 +137,7 @@
   justify-content: center;
 }
 
-.main .expressBox{
+.box:nth-child(3) .expressBox{
   display: inline-block;
   width: 50%;
   height: 100%;
@@ -142,8 +146,9 @@
 .express{
   display: flex;
   height: 100%;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 30px;
 }
 .expressTitle{
   display: flex;
@@ -153,11 +158,32 @@
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
+  transition: 2.8s;
+  opacity: 1;
+  animation: anime_bigTitle 2.8s;
 }
+@keyframes anime_bigTitle {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/*--------------------------------*/
+
+/*----------tag area-----------*/
+.main .box:nth-child(4){
+  height: auto;
+  padding-bottom: 40lvh;
+  background-color: rgba(241, 230, 210, 0.75);
+}  
 
 .tag_box{
   padding-left: 50px;
 }
+
+/*----------------------------*/
 
 a.primary {
   background: var(--foreground);
@@ -235,31 +261,53 @@ a.secondary {
     padding-left: 30px;
   }
 
-  .main .box{
-    height: 150vh;
+  .main .firstSection{
+    height: calc(200vh + 70vw);
   }
 
-  .main .box:nth-child(1){
+  .scrollbox:nth-child(1){
     height: 100vh;
   }
-  .main .box:nth-child(2){
-    height: calc(100vh + 80vw);
+  .scrollbox:nth-child(2){
+    height: calc(100vh + 70vw);
+    margin-top: calc(-100vh - 70vw);
   }
-  .main .box:nth-child(3){
+
+  /*-------tag area ------*/
+  .main .box:nth-child(4){
     display: block;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
+  }
+  /*-----------------------*/
+  
+  /*-----self introduction-------*/
+  .main .box:nth-child(3){
+    height: 130vh;
+    flex-direction: column;
+  }
+  .box:nth-child(3) .profileBox{
+    height: 15%;
+    width: 100%;
   }
   
-  .main .expressBox, .main .profileBox{
-    display: block;
-    height: 50%;
+  .box:nth-child(3) .expressBox{
+    height: 80%;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 15px;
+  }
+  .expressBox .express{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
   }
   .expressBox .express p{
+    display: inline;
     overflow: scroll;
-    height: 100%;
+    height: auto;
+    line-height: auto;
   }
+  /*-----------------------------*/
 
   .footer .contentBox{
     display: block;
