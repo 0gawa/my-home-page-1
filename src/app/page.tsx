@@ -4,11 +4,15 @@ import Link from "next/link";
 import Tag from "@/app/ui/tag";
 import PortfolioBox from "@/app/ui/portfolio_box";
 import site_logo from "./images/top/site_logo.png";
-import saunaTankentai from "./images/saunaTankentai.png"
-import { Qwitcher_Grypen } from "next/font/google";
+import saunaTankentai from "./images/saunaTankentai.png";
+import { Lora, Qwitcher_Grypen } from "next/font/google";
 
 const QwitcherGrypen = Qwitcher_Grypen({
   weight: "700",
+  subsets: ["latin"],
+});
+const lora = Lora({
+  weight: "600",
   subsets: ["latin"],
 });
 
@@ -36,7 +40,7 @@ export default function Home() {
 
         <div className={styles.box}>
           <div className="h-1/6 flex justify-center items-center">
-            <h1 className="text-5xl text-white font-semibold">Portfolio</h1>
+            <h1 className="text-5xl text-white"><span className={lora.className}>Portfolio</span></h1>
           </div>
           <div className="h-5/6 flex justify-center">
             <PortfolioBox
@@ -53,7 +57,7 @@ export default function Home() {
 
         <div className={styles.box}>
           <div className={styles.profileBox}>
-            <h1 className={styles.expressTitle}>About me</h1>
+            <h1 className={styles.expressTitle}><span className={lora.className}>About me</span></h1>
           </div>
           <div className={styles.expressBox}>
             <div className={styles.express}>
@@ -71,7 +75,7 @@ export default function Home() {
         </div>
 
         <div className={styles.box}>
-          <h1 className="text-3xl pl-5 mb-7 ms-12 font-semibold border-yellow-300 border-l-8">Keyword</h1>
+          <h1 className="text-3xl pl-5 mb-7 ms-12 border-yellow-300 border-l-8"><span className={lora.className}>Keyword</span></h1>
           <div className={styles.tag_box}>
             <Tag content={"Ruby"}></Tag>
             <Tag content={"Python"}></Tag>
