@@ -31,14 +31,17 @@ export default function Home() {
         </Link>
       </header>
       <main className={styles.main}>
-        <div className={styles.box}>
-          <p className={`${styles.big_title} ${QwitcherGrypen.className}`}>
-            My Mission Is To<br/>
-            Deliver Excitement
-          </p>
-        </div>
+        
+        <section className={styles.firstSection}>
+          <div className={styles.scrollbox}>
+            <p className={`${styles.big_title} ${QwitcherGrypen.className}`}>
+              My Mission Is To<br/>
+              Deliver Excitement
+            </p>
+          </div>
 
-        <div className={styles.box}>
+        </section>
+        <div className={styles.scrollbox}>
           <div className="h-1/6 flex justify-center items-center">
             <h1 className="text-5xl text-white"><span className={lora.className}>Portfolio</span></h1>
           </div>
@@ -64,11 +67,14 @@ export default function Home() {
               <p>
               私はCS専攻の大学生です。大学入学と同時にプログラミングを始め、その面白さに魅了されました。
               その後、積極的に勉強をし大学2年生のときに応用情報技術者試験に合格しました。他にも数学技能検定準1級
-              、統計検定2級、TOEIC790などを保有しています。<br/><br/>
-              
+              、統計検定2級、TOEIC790などを保有しています。
+              </p>
+              <p>
               これに加えて、Webアプリケーション開発にも力を入れています。フロントエンド、バックエンドからインフラ周り
-              までフルスタックに開発しています。最近はUIのことについて学んでいます。<br/><br/>
-              これまでに培った幅広い知識と実践的なスキルを活かし、社会にワクワクを届けたいと考えています。
+              までフルスタックに開発しています。最近はUIのことについて学んでいます。
+              </p>
+              <p>
+              これまでに培った幅広い知識と実践的なスキルを活かし、社会にワクワクを届けます。
               </p>
             </div>
           </div>
