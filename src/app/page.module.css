@@ -176,7 +176,7 @@
 .main .box:nth-child(4){
   height: auto;
   padding-bottom: 40lvh;
-  background-color: rgba(241, 230, 210, 0.75);
+  background-color: rgba(241, 230, 210, 0.9);
 }  
 
 .tag_box{

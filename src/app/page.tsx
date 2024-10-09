@@ -91,6 +91,7 @@ export default function Home() {
             <Tag content={"JavaScript"}></Tag>
             <Tag content={"Next.js"}></Tag>
             <Tag content={"React"}></Tag>
+            <Tag content={"Docker"}></Tag>
             <Tag content={"Web Development"}></Tag>
             <Tag content={"Sauna"}></Tag>
             <Tag content={"Coffee"}></Tag>
